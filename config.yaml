@@ -1,0 +1,36 @@
+cookie:
+  expiry_days: 30
+  key: streamlit_resume_analyzer_v2
+  name: resume_analyzer_auth_v2
+credentials:
+  usernames:
+    admin:
+      email: admin@example.com
+      name: Admin User
+      password: $2b$12$HvWHPbyNLT3MUO7VXzE7JuOk8Xb3w8OjPQKhChVJwJjgvbmBXeJfW
+    demo:
+      email: demo@example.com
+      name: Demo User
+      password: $2b$12$6qw7Iz2XKW8N2VYhJ4HZTeMO/OuqxFMOxRZqvPuYKqVhM2iDOLKXe
+    dev:
+      email: devsantoriya818@gmail.com
+      name: Dev
+      password: $2b$12$qUZWPKj8vTkPKnyXPZreGOr6bngU5SI/ViuOkwSmqsiofoXriFGdO
+    dev singh:
+      email: devsantoriya818@gmail.com
+      name: Dev
+      password: $2b$12$zPs1PQipSZJOIQvib.NTKeaF5PMQZtzKYlOXZsfHcMM8IJNhS1CwK
+    devsantoriya:
+      email: devsantoriya818@gmail.com
+      name: Dev Santoriya
+      password: $2b$12$T9X9h1sKX8H4Qpz.rXWz/OqjR3PJzQJ7L9vW8yN6fZ5tM4hK2sL8e
+    onlydev:
+      name: Dev
+      email: dev07012007@gmail.com
+      password: $2a$12$P1QmqAZC/OMma0SHnw9BzeCkgBfjNKX59hSEqyT672wUvzhlST1Ni
+preauthorized:
+  emails:
+    - admin@example.com
+    - demo@example.com
+    - devsantoriya818@gmail.com
+    - dev07012007@gmail.com

@@ -80,7 +80,14 @@ export const FirestoreUserStore = {
       name: data.name,
       email: data.email,
       avatar: data.avatar || null,
-      provider: data.provider || 'local'
+      provider: data.provider || 'local',
+      phone: data.phone || '',
+      bio: data.bio || '',
+      targetRole: data.targetRole || '',
+      experience: data.experience || '',
+      location: data.location || '',
+      linkedin: data.linkedin || '',
+      github: data.github || ''
     };
   },
 

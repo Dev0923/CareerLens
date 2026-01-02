@@ -1,0 +1,13 @@
+{
+  "name": "resume-ats-analyzer",
+  "version": "1.0.0",
+  "description": "CareerLens - AI-Powered Career Intelligence Platform",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run dev --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

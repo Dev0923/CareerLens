@@ -1,0 +1,16 @@
+# ---- UI Framework ----
+streamlit              # Simple web app frontend to upload resumes and display results
+
+# ---- Google Gemini API ----
+google-generativeai     # Official Gemini SDK for text models (gemini-1.5-flash)
+
+# ---- Environment Variables ----
+python-dotenv           # Load your API keys (like Google API) securely from .env file
+
+# ---- PDF Text Extraction ----
+pdfplumber             # Extract text from PDF files (text-based PDFs only)
+
+# ---- Authentication & Security ----
+streamlit-authenticator>=0.2.2  # Secure login/logout with session management
+bcrypt>=4.1.0                   # Password hashing with bcrypt
+pyyaml>=6.0                     # YAML configuration files

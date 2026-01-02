@@ -49,7 +49,7 @@ export default function Dashboard({ user, onNavigateTo }) {
       avatar: '👩‍💼',
       image: '/Sakshi-sharma%20.jpg',
       bio: 'Passionate about building clean, responsive, and user-centric interfaces. Focused on crafting smooth login experiences, intuitive layouts, and modern animations that enhance usability and visual appeal. Believes great design is where creativity meets performance.',
-      social: { insta: '#', linkedin: '#', github: '#' }
+      social: { insta: 'https://www.instagram.com/saakshhi_sh/', linkedin: 'https://www.linkedin.com/in/sakshi-sharma-5aa9642a6/', github: 'https://github.com/Sakshi2095' }
     },
     {
       id: 2,
@@ -67,7 +67,7 @@ export default function Dashboard({ user, onNavigateTo }) {
       avatar: '👨‍🔬',
       image: '/pratham-pareek%20.jpg',
       bio: 'Driven by applying AI to solve real-world problems. Specializes in resume parsing, ATS scoring, and intelligent feedback generation using NLP and machine learning techniques. Aims to make career insights smarter, faster, and more accessible.',
-      social: { insta: '#', linkedin: 'https://www.linkedin.com/in/pratham-pareek-93449b381/', github: '#' }
+      social: { insta: 'https://www.instagram.com/pra.tham_._?utm_source=qr&igsh=MWV6a3lwZ3ZqMTk2eg==', linkedin: 'https://www.linkedin.com/in/pratham-pareek-93449b381/', github: 'https://github.com/Pratham-deploy' }
     }
   ];
 
