@@ -1,0 +1,39 @@
+<% const content = `
+  <header>
+    <div class="brand">� CareerLens</div>
+    <div class="badge">Gemini 2.5 Flash</div>
+  </header>
+  <h1>Optimize Your Resume for HR and ATS</h1>
+  <p class="lead">Upload a text-based PDF, paste a job description, and get dual-perspective analysis: human-friendly HR review plus ATS scoring with keyword gaps.</p>
+  <div class="cta-row">
+    <a class="btn" href="/" aria-label="Open app">Open App</a>
+    <a class="btn secondary" href="/api/health" aria-label="API health">API Health</a>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>📋 HR Review</h3>
+      <p class="muted">Get comprehensive strengths, gaps, and recommendations from a human resources perspective.</p>
+    </div>
+    <div class="card">
+      <h3>🎯 ATS Match</h3>
+      <p class="muted">Score out of 100, missing keywords, and ATS formatting readiness analysis.</p>
+    </div>
+    <div class="card" style="border-color: rgba(0, 180, 168, 0.6); background: rgba(0, 180, 168, 0.1);">
+      <h3 style="background: linear-gradient(135deg, #00B4A8 0%, #1DB584 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🔍 Skill Gap Analysis</h3>
+      <p class="muted">Identify missing skills, estimate salary impact, and get personalized learning recommendations for your target role.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Fast & Secure</h3>
+      <p class="muted">No data stored. Runs with your Gemini API key. Authentication backed by secure YAML users.</p>
+    </div>
+    <div class="card">
+      <h3>🔧 Same Core Logic</h3>
+      <p class="muted">Reuses the exact prompts and analysis flows from the original Streamlit version.</p>
+    </div>
+  </div>
+  <footer>
+    <strong>CareerLens</strong> powered by Gemini AI<br>
+    © 2025 • GDG Project
+  </footer>
+`; %>
+<%- include('layout', { title: 'CareerLens — AI-Powered Career Intelligence', body: content }) %>

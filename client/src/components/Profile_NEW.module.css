@@ -1,0 +1,645 @@
+.profileContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  background: #f3f2ef;
+  min-height: 100vh;
+}
+
+/* Main Profile Card */
+.mainCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.coverImage {
+  height: 200px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.profileInfoSection {
+  padding: 0 24px 24px;
+  position: relative;
+}
+
+.avatarWrapper {
+  margin-top: -70px;
+  margin-bottom: 16px;
+}
+
+.largeAvatar {
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.largeAvatar:hover {
+  transform: scale(1.02);
+}
+
+.largeAvatar:hover .uploadOverlay {
+  opacity: 1;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personIcon {
+  width: 80px;
+  height: 80px;
+  color: white;
+}
+
+.uploadOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: 50%;
+}
+
+.uploadText {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fileInput {
+  display: none;
+}
+
+.profileDetails {
+  margin-top: 12px;
+}
+
+.profileName {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000e6;
+  line-height: 1.4;
+}
+
+.profileRole {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #000000e6;
+  font-weight: 400;
+}
+
+.profileLocation {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  color: #00000099;
+}
+
+.contactInfo {
+  color: #0a66c2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contactInfo:hover {
+  text-decoration: underline;
+}
+
+.actionButtonsTop {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  padding: 8px 16px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.primaryButton:hover {
+  background: #004182;
+}
+
+.secondaryButton {
+  padding: 8px 16px;
+  background: white;
+  color: #0a66c2;
+  border: 1px solid #0a66c2;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondaryButton:hover {
+  background: #eef3f8;
+  border-width: 2px;
+}
+
+.moreButton {
+  padding: 8px 16px;
+  background: white;
+  color: #00000099;
+  border: 1px solid #00000099;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  line-height: 1;
+}
+
+.moreButton:hover {
+  background: #eef3f8;
+  border-color: #000000;
+  color: #000000;
+}
+
+.saveButton {
+  padding: 8px 24px;
+  background: #057642;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.saveButton:hover {
+  background: #046139;
+}
+
+.cancelButton {
+  padding: 8px 24px;
+  background: white;
+  color: #00000099;
+  border: 1px solid #00000099;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton:hover {
+  background: #eef3f8;
+  border-color: #000000;
+  color: #000000;
+}
+
+/* Section Cards */
+.sectionCard {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.sectionHeader {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000e6;
+}
+
+.aboutText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000000e6;
+}
+
+/* Experience Section */
+.experienceItem {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.experienceLogo {
+  flex-shrink: 0;
+}
+
+.experienceContent {
+  flex: 1;
+}
+
+.experienceTitle {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000e6;
+}
+
+.experienceCompany {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #00000099;
+}
+
+.experienceTime {
+  margin: 0;
+  font-size: 14px;
+  color: #00000099;
+}
+
+/* Contact & Social */
+.contactGrid, .socialGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactItem, .socialItem {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactLabel, .socialLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #00000099;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.contactValue, .socialValue {
+  margin: 0;
+  font-size: 14px;
+  color: #000000e6;
+  word-break: break-word;
+}
+
+.socialValue {
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+.socialValue:hover {
+  text-decoration: underline;
+}
+
+/* Stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.statCard {
+  text-align: center;
+  padding: 16px;
+  background: #f3f2ef;
+  border-radius: 8px;
+}
+
+.statNumber {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000e6;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: #00000099;
+}
+
+/* Legal */
+.legalItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f3f2ef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000e6;
+}
+
+.legalItem:hover {
+  background: #e8e6e1;
+}
+
+/* Edit Inputs */
+.editInputName {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #00000066;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000e6;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.editInputRole, .editInputLocation {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #00000066;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #000000e6;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.editInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #00000066;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #000000e6;
+  transition: all 0.2s;
+}
+
+.editInputSmall {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #00000066;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #00000099;
+  transition: all 0.2s;
+}
+
+.editTextarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #00000066;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #000000e6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  resize: vertical;
+  transition: all 0.2s;
+}
+
+.editInputName:focus,
+.editInputRole:focus,
+.editInputLocation:focus,
+.editInput:focus,
+.editInputSmall:focus,
+.editTextarea:focus {
+  outline: none;
+  border-color: #0a66c2;
+  box-shadow: 0 0 0 1px #0a66c2;
+}
+
+.inputError {
+  border-color: #cc1016 !important;
+  box-shadow: 0 0 0 1px #cc1016 !important;
+}
+
+.errorMessage {
+  color: #cc1016;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalHeader {
+  padding: 20px 24px;
+  border-bottom: 1px solid #00000014;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000e6;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00000099;
+  transition: all 0.2s;
+}
+
+.closeButton:hover {
+  background: #00000014;
+  color: #000000e6;
+}
+
+.modalContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  color: #000000e6;
+}
+
+.modalContent h3 {
+  margin: 20px 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modalContent p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.modalContent ul {
+  margin: 0 0 12px 0;
+  padding-left: 24px;
+}
+
+.modalContent li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.lastUpdated {
+  background: #f3f2ef;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px !important;
+}
+
+.modalFooter {
+  padding: 16px 24px;
+  border-top: 1px solid #00000014;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.acceptButton {
+  padding: 10px 24px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.acceptButton:hover {
+  background: #004182;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 0;
+    background: white;
+  }
+
+  .mainCard, .sectionCard {
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 8px solid #f3f2ef;
+  }
+
+  .coverImage {
+    height: 120px;
+  }
+
+  .profileInfoSection {
+    padding: 0 16px 16px;
+  }
+
+  .avatarWrapper {
+    margin-top: -40px;
+  }
+
+  .largeAvatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .personIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profileName {
+    font-size: 20px;
+  }
+
+  .sectionCard {
+    padding: 16px;
+  }
+
+  .actionButtonsTop {
+    width: 100%;
+  }
+
+  .primaryButton, .secondaryButton {
+    flex: 1;
+  }
+}

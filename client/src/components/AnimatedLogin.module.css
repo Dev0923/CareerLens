@@ -1,0 +1,44 @@
+.root{min-height:100vh;height:100%;display:flex;align-items:center;justify-content:center;background:#6f7375;font-family:"Inter",system-ui,sans-serif;color:#0f172a;padding:32px;width:100%}
+.bg{position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.08),transparent 32%),radial-gradient(circle at 80% 10%,rgba(255,255,255,.06),transparent 34%),#6f7375;z-index:0}
+.shell{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;width:min(980px,96vw);background:#ffffff;border-radius:18px;overflow:hidden;box-shadow:0 18px 70px rgba(0,0,0,.28);isolation:isolate;transition:transform 180ms ease}
+.visual{position:relative;min-height:520px;background:#1f2937}
+.visualImage{position:absolute;inset:0;background-size:cover;background-position:center}
+.visualContent{position:relative;z-index:1;display:grid;align-content:space-between;height:100%;padding:28px 28px 32px;background:linear-gradient(180deg,rgba(24,32,46,.46),rgba(14,18,28,.72))}
+.logoMark{width:42px;height:42px;border-radius:12px;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;font-weight:700;color:#fff;background:rgba(255,255,255,.08);backdrop-filter:blur(6px)}
+.visualText{display:grid;gap:10px;color:#f8fafc}
+.visualText h2{margin:0;font-size:26px;line-height:1.15;letter-spacing:-0.4px}
+.kicker{margin:0;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:rgba(248,250,252,.76)}
+.caption{margin:0;color:rgba(248,250,252,.78);font-size:14px;line-height:1.5}
+.ghostButton{width:120px;justify-self:start;border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;padding:10px 16px;border-radius:999px;font-weight:600;cursor:pointer;transition:all 160ms ease}
+.ghostButton:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-1px)}
+.formPanel{position:relative;padding:38px;display:grid;gap:22px;background:#ffffff}
+.formHeader{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.subtle{margin:0;color:#6b7280;font-size:13px}
+.formHeader h3{margin:2px 0 0;font-size:26px;letter-spacing:-0.3px;color:#0f172a}
+.tabRow{display:flex;gap:8px}
+.tab{border:1px solid #e5e7eb;background:#f8fafc;color:#374151;border-radius:10px;padding:10px 14px;font-weight:600;cursor:pointer;transition:all 160ms ease}
+.tabActive{background:#0f172a;color:#f9fafb;border-color:#0f172a;box-shadow:0 10px 30px rgba(15,23,42,.25)}
+.form{display:grid;gap:12px}
+.label{font-size:13px;color:#111827;font-weight:600}
+.input{height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #d1d5db;background:#f8fafc;font-size:14px;color:#111827;transition:all 140ms ease;caret-color:#0f172a}
+.input::placeholder{color:#6b7280}
+.input:focus{outline:none;border-color:#0f172a;box-shadow:0 0 0 3px rgba(15,23,42,.12);background:#f1f5f9;color:#0f172a}
+.inlineRow{display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#4b5563;margin-top:4px}
+.checkboxLabel{display:flex;align-items:center;gap:8px;color:#374151}
+.textBtn{background:none;border:0;color:#0f172a;font-weight:600;cursor:pointer;padding:0;transition:color 120ms ease}
+.textBtn:hover{color:#111827}
+.primary{border:0;height:46px;border-radius:999px;background:#5a4a6b;color:#fff;font-weight:700;letter-spacing:.3px;cursor:pointer;box-shadow:0 12px 35px rgba(90,74,107,.32);transition:transform 150ms ease,box-shadow 160ms ease}
+.primary:hover{transform:translateY(-1px);box-shadow:0 16px 42px rgba(90,74,107,.4)}
+.switcher{margin:0;font-size:13px;color:#4b5563;text-align:center}
+.googleRow{margin:8px 0 4px;display:grid;gap:6px;justify-items:center}
+.googleHint{margin:0;font-size:12px;color:#6b7280}
+.error{color:#b91c1c;font-size:13px;text-align:left;padding:10px 12px;border-radius:10px;background:rgba(185,28,28,.06);border:1px solid rgba(185,28,28,.18)}
+.successOverlay{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.35);backdrop-filter:blur(4px)}
+.successBox{display:grid;gap:10px;justify-items:center;color:#e0f2fe;background:rgba(15,23,42,.9);padding:20px 24px;border-radius:14px;box-shadow:0 16px 50px rgba(0,0,0,.35)}
+.check{width:52px;height:52px}
+.check path{stroke:#22c55e;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;animation:draw 700ms ease forwards 120ms}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-4px)}40%,60%{transform:translateX(4px)}}
+.shake{animation:shake 420ms cubic-bezier(.36,.07,.19,.97) both}
+@media (max-width:900px){.shell{grid-template-columns:1fr}.visual{display:none}.formPanel{padding:28px}}
+@media (prefers-reduced-motion:reduce){.check path{animation:none!important}.shell{transition:none}}
