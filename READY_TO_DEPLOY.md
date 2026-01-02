@@ -67,10 +67,12 @@
 ```
 NODE_ENV=production
 PORT=10000
-GOOGLE_API_KEY=AIzaSyDUw_14QZdXZj0NnIkLpPxEVtUMCTJve8o
-GOOGLE_CLIENT_ID=423855747564-gsal0bj58gr4dbanin9r1urfdkk4oe3m.apps.googleusercontent.com
-FIREBASE_SERVICE_ACCOUNT=(see QUICK_DEPLOY.md for full JSON)
+GOOGLE_API_KEY=<your-google-api-key>
+GOOGLE_CLIENT_ID=<your-google-client-id>.apps.googleusercontent.com
+FIREBASE_SERVICE_ACCOUNT=<your-firebase-service-account-json>
 ```
+
+**Note:** Get your credentials from Google Cloud Console and Firebase Console.
 
 ### Frontend (Render/Vercel)
 ```
