@@ -16,7 +16,7 @@ Overall Fit: [⭐⭐⭐⭐⭐ rating with descriptor - Excellent/Very Good/Good/
 💪 Core Strengths
 [List 3-5 main strength categories with emoji headers, each containing:]
 
-[Emoji] [Strength Category Name]
+[Emoji] [Strength Category Name - plain text, no asterisks or bold markers]
 
 • [Specific achievement/metric]
 • [Specific achievement/metric]
@@ -27,7 +27,7 @@ Impact: [Brief impact statement]
 ⚠️ Potential Gaps
 [List 2-4 areas of concern or gaps, each with:]
 
-[Emoji] [Gap/Concern Title]
+[Emoji] [Gap/Concern Title - plain text, no asterisks or bold markers]
 
 • [Specific concern or missing element]
 
@@ -67,6 +67,8 @@ Interview Focus Areas:
 - Make recommendations actionable
 - Be balanced - highlight both strengths and gaps
 - Maintain professional yet engaging tone
+- DO NOT use ** or __ for bold text - use plain text for all headings and content
+- Category headings should be: [Emoji] [Plain Text Title]
 `;
 
 export const ATS_PROMPT = `
