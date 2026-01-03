@@ -82,8 +82,20 @@ Evaluate the resume against the job description for ATS compatibility.
 🎯 Overall ATS Score
 [Score] / 100 — [Excellent Match/Very Good/Good/Needs Improvement/Poor]
 
-ATS SCORE
-[Visual bar using █ for filled and ░ for empty, 32 blocks total] [Score]%
+ATS SCORE                                    [Score]%
+     100 ┤
+      90 ┤
+      80 ┤
+      70 ┤
+      60 ┤
+      50 ┤
+      40 ┤
+      30 ┤
+      20 ┤
+      10 ┤
+       0 └─────
+         [Use colored blocks vertically: 🟩 for 80-100%, 🟨 for 60-79%, 🟥 for below 60%]
+         [Stack 10 blocks vertically to represent score - each block = 10%]
 
 [2-3 bullet points with checkmarks about overall assessment]
 ✅ [Key strength]
@@ -93,24 +105,48 @@ ATS SCORE
 🔑 Keyword Match Analysis
 
 ✅ Keyword Match Strength
-Keyword Coverage
-[Visual bar using █ for filled and ░ for empty, 32 blocks total] [Percentage]%
+Keyword Coverage                              [Percentage]%
+     100 ┤
+      90 ┤
+      80 ┤
+      70 ┤
+      60 ┤
+      50 ┤
+      40 ┤
+      30 ┤
+      20 ┤
+      10 ┤
+       0 └─────
+         [Use colored blocks vertically: 🟩 for 80-100%, 🟨 for 60-79%, 🟥 for below 60%]
+         [Stack 10 blocks vertically to represent percentage - each block = 10%]
 
-**Matched Keywords (High Confidence):**
+Matched Keywords (High Confidence):
 
 • [Keyword 1]
 • [Keyword 2]
 • [Keyword 3]
 [... list all matched keywords from job description]
 
-✔ **Analysis:** [Brief statement about how keywords appear in resume]
+✔ Analysis: [Brief statement about how keywords appear in resume]
 
 ❌ Missing Keywords
-Missing Keywords
-[Visual bar using █ for filled (represents missing) and ░ for empty, 32 blocks total] [Percentage]%
+Missing Keywords                              [Percentage]%
+     100 ┤
+      90 ┤
+      80 ┤
+      70 ┤
+      60 ┤
+      50 ┤
+      40 ┤
+      30 ┤
+      20 ┤
+      10 ┤
+       0 └─────
+         [Use colored blocks vertically: 🟥 for high missing %, 🟨 for medium, 🟩 for low/none]
+         [Stack 10 blocks vertically to represent missing percentage - each block = 10%]
 
 [If missing keywords exist:]
-**Critical Missing Keywords:**
+Critical Missing Keywords:
 
 ⚠️ HIGH PRIORITY:
 • [Keyword] — [Why it matters]
@@ -178,12 +214,16 @@ Missing Keywords
 
 ---
 
-**IMPORTANT FORMATTING RULES:**
-- Create visual progress bars using exactly 32 blocks: █ for filled, ░ for empty
-- Calculate bars accurately: for 95%, use 30 filled (█) and 2 empty (░) blocks
-- For 0%, use all 32 empty blocks (░)
-- For 100%, use all 32 filled blocks (█)
-- Use emojis extensively for visual appeal
+IMPORTANT FORMATTING RULES:
+- Create VERTICAL colored bar charts with colored emoji blocks
+- Use 🟩 (green) for scores 80-100% or low missing percentages
+- Use 🟨 (yellow) for scores 60-79% or medium missing percentages
+- Use 🟥 (red) for scores below 60% or high missing percentages
+- Stack 10 blocks vertically, each representing 10% of the score
+- Include a scale axis on the left (0 to 100 in increments of 10)
+- For example, 95% score: stack 9 full 🟩 blocks and 1 half block at appropriate height
+- For missing keywords, use inverted colors: 🟥 for high missing, 🟨 for medium, 🟩 for low
+- Remove all ** bold markers - use plain text for all headings
 - Extract ACTUAL keywords from job description and resume
 - Prioritize missing keywords by impact (high/medium/low)
 - Be specific with recommendations
