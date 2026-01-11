@@ -92,12 +92,18 @@ export default function Profile({ user, onBack }) {
           
           // Load profile image if available
           if (profile.profileImage) {
-            setImagePreview(profile.profileImage);
+            const src = profile.profileImage.startsWith('/uploads')
+              ? `${apiBase}${profile.profileImage}`
+              : profile.profileImage;
+            setImagePreview(src);
           }
           
           // Load banner image if available
           if (profile.bannerImage) {
-            setBannerPreview(profile.bannerImage);
+            const src = profile.bannerImage.startsWith('/uploads')
+              ? `${apiBase}${profile.bannerImage}`
+              : profile.bannerImage;
+            setBannerPreview(src);
           }
         }
       } catch (error) {
