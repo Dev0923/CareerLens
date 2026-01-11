@@ -62,8 +62,7 @@ export default function AnimatedLogin({ onAuth }) {
       size: 'large',
       text: 'continue_with',
       shape: 'pill',
-      logo_alignment: 'left',
-      width: 320
+      logo_alignment: 'left'
     });
     googleRenderedRef.current = true;
   }, [googleReady, googleClientId]);

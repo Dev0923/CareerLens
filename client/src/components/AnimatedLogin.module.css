@@ -30,7 +30,9 @@
 .primary{border:0;height:46px;border-radius:999px;background:#5a4a6b;color:#fff;font-weight:700;letter-spacing:.3px;cursor:pointer;box-shadow:0 12px 35px rgba(90,74,107,.32);transition:transform 150ms ease,box-shadow 160ms ease}
 .primary:hover{transform:translateY(-1px);box-shadow:0 16px 42px rgba(90,74,107,.4)}
 .switcher{margin:0;font-size:13px;color:#4b5563;text-align:center}
-.googleRow{margin:8px 0 4px;display:grid;gap:6px;justify-items:center}
+.googleRow{margin:8px 0 4px;display:grid;gap:6px;justify-items:center;width:100%}
+.googleRow > div{display:flex;justify-content:center;width:100%;min-height:44px;align-items:center}
+.googleRow iframe{max-width:100% !important;width:auto !important}
 .googleHint{margin:0;font-size:12px;color:#6b7280}
 .error{color:#b91c1c;font-size:13px;text-align:left;padding:10px 12px;border-radius:10px;background:rgba(185,28,28,.06);border:1px solid rgba(185,28,28,.18)}
 .successOverlay{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.35);backdrop-filter:blur(4px)}
