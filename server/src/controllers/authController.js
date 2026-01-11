@@ -93,11 +93,30 @@ export const AuthController = {
   updateProfile: async (req, res) => {
     try {
       const { username, profileData } = req.body || {};
-      if (!username || !profileData) {
-        return res.status(400).json({ ok: false, message: 'Username and profile data are required.' });
+      if (!username) {
+        return res.status(400).json({ ok: false, message: 'Username is required.' });
       }
 
-      const success = await FirestoreUserStore.updateProfile(username.trim().toLowerCase(), profileData);
+      let parsedProfileData = {};
+      if (profileData) {
+        try {
+          parsedProfileData = typeof profileData === 'string' ? JSON.parse(profileData) : profileData;
+        } catch (e) {
+          parsedProfileData = profileData;
+        }
+      }
+
+      // Handle file uploads
+      if (req.files) {
+        if (req.files.profileImage && req.files.profileImage.length > 0) {
+          parsedProfileData.profileImage = `/uploads/${req.files.profileImage[0].filename}`;
+        }
+        if (req.files.bannerImage && req.files.bannerImage.length > 0) {
+          parsedProfileData.bannerImage = `/uploads/${req.files.bannerImage[0].filename}`;
+        }
+      }
+
+      const success = await FirestoreUserStore.updateProfile(username.trim().toLowerCase(), parsedProfileData);
       if (success) {
         return res.json({ ok: true, message: 'Profile updated successfully.' });
       } else {

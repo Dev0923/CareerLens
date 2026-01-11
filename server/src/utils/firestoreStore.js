@@ -80,6 +80,8 @@ export const FirestoreUserStore = {
       name: data.name,
       email: data.email,
       avatar: data.avatar || null,
+      profileImage: data.profileImage || null,
+      bannerImage: data.bannerImage || null,
       provider: data.provider || 'local',
       phone: data.phone || '',
       bio: data.bio || '',

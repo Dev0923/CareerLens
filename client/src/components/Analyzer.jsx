@@ -340,7 +340,7 @@ export default function Analyzer({ user, onLogout, showSkillGapOnly = false, sho
         {/* Footer */}
         <div className="analyzer-footer">
           <strong>CareerLens</strong> powered by Gemini AI
-          <div className="footer-text">© 2025 • GDG Project</div>
+          <div className="footer-text">© 2026 • GDG Project</div>
         </div>
         </>
         )}

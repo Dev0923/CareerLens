@@ -89,6 +89,16 @@ export default function Profile({ user, onBack }) {
             linkedin: profile.linkedin || '',
             github: profile.github || ''
           }));
+          
+          // Load profile image if available
+          if (profile.profileImage) {
+            setImagePreview(profile.profileImage);
+          }
+          
+          // Load banner image if available
+          if (profile.bannerImage) {
+            setBannerPreview(profile.bannerImage);
+          }
         }
       } catch (error) {
         console.error('Error loading profile:', error);
@@ -202,6 +212,19 @@ export default function Profile({ user, onBack }) {
     
     // Save profile data to backend
     try {
+      const formData = new FormData();
+      
+      // Add profile image if selected
+      if (profileImage) {
+        formData.append('profileImage', profileImage);
+      }
+      
+      // Add banner image if selected
+      if (bannerImage) {
+        formData.append('bannerImage', bannerImage);
+      }
+      
+      // Add profile data
       const profileToSave = {
         phone: profileData.phone,
         bio: profileData.bio,
@@ -211,21 +234,20 @@ export default function Profile({ user, onBack }) {
         linkedin: profileData.linkedin,
         github: profileData.github
       };
+      
+      formData.append('username', user?.username);
+      formData.append('profileData', JSON.stringify(profileToSave));
 
       const response = await fetch(`${apiBase}/api/auth/update-profile`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          username: user?.username,
-          profileData: profileToSave
-        })
+        body: formData
       });
 
       if (response.ok) {
         setEditMode(false);
         setErrors({});
+        setProfileImage(null);
+        setBannerImage(null);
         alert('Profile saved successfully!');
       } else {
         alert('Failed to save profile. Please try again.');

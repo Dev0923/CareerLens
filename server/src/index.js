@@ -51,6 +51,13 @@ app.use(express.json({ limit: '2mb' }));
 app.set('views', path.resolve(process.cwd(), 'views'));
 app.set('view engine', 'ejs');
 
+// Serve uploaded files
+const uploadsDir = path.resolve(process.cwd(), 'server', 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
+app.use('/uploads', express.static(uploadsDir));
+
 app.get('/api/health', (req, res) => res.json({ ok: true, status: 'healthy' }));
 app.use('/api/auth', authRoutes);
 app.use('/api/analyze', analyzeRoutes);
