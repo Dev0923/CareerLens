@@ -43,7 +43,6 @@ export default function AnimatedLogin({ onAuth }) {
     script.async = true;
     script.defer = true;
     script.id = 'google-identity';
-    script.crossOrigin = 'anonymous';
     script.onload = () => setGoogleReady(true);
     document.head.appendChild(script);
   }, [googleClientId]);
