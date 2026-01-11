@@ -41,4 +41,45 @@
 @keyframes shake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(2px)}30%,50%,70%{transform:translateX(-4px)}40%,60%{transform:translateX(4px)}}
 .shake{animation:shake 420ms cubic-bezier(.36,.07,.19,.97) both}
 @media (max-width:900px){.shell{grid-template-columns:1fr}.visual{display:none}.formPanel{padding:28px}}
+@media (max-width:640px){
+  .root{padding:12px 16px}
+  .shell{width:100%;border-radius:12px}
+  .formPanel{padding:20px 18px}
+  .formHeader{flex-direction:column;align-items:flex-start;gap:4px}
+  .formHeader h3{font-size:22px}
+  .subtle{font-size:12px}
+  .visualText h2{font-size:22px}
+  .caption{font-size:13px}
+  .ghostButton{width:100px;font-size:13px}
+  .tabRow{gap:6px}
+  .tab{padding:8px 12px;font-size:13px}
+  .input{height:42px;font-size:13px;padding:0 12px}
+  .label{font-size:12px}
+  .primary{height:44px;font-size:15px}
+  .error{font-size:12px;padding:8px 10px}
+  .form{gap:10px}
+  .googleRow{margin:6px 0 2px}
+  .googleHint{font-size:11px}
+}
+@media (max-width:480px){
+  .root{padding:8px 12px;min-height:100vh}
+  .shell{grid-gap:0;border-radius:10px;box-shadow:0 10px 35px rgba(0,0,0,.2)}
+  .formPanel{padding:16px 14px}
+  .formHeader{gap:2px}
+  .formHeader h3{font-size:20px;margin-top:0}
+  .subtle{font-size:11px;margin:2px 0 0}
+  .tabRow{gap:4px}
+  .tab{padding:7px 10px;font-size:12px;border-radius:8px}
+  .form{gap:8px}
+  .label{font-size:11px;margin-bottom:2px}
+  .input{height:40px;font-size:12px;padding:0 10px;border-radius:8px}
+  .primary{height:42px;font-size:14px;border-radius:8px}
+  .error{font-size:11px;padding:6px 8px;border-radius:8px}
+  .inlineRow{font-size:12px;margin-top:2px}
+  .checkboxLabel{font-size:12px;gap:6px}
+  .switcher{font-size:12px;margin-top:4px}
+  .googleRow{margin:4px 0 0}
+  .googleHint{font-size:10px}
+  .textBtn{font-size:12px}
+}
 @media (prefers-reduced-motion:reduce){.check path{animation:none!important}.shell{transition:none}}

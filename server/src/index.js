@@ -40,8 +40,8 @@ app.use(cors({
 
 // Add security headers for Google Identity Services
 app.use((req, res, next) => {
-  // COOP header: Allow popups to communicate via postMessage (required for Google Sign-In)
-  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+  // COOP header: Allow same-origin-allow-popups to support Google Sign-In popup
+  res.setHeader('Cross-Origin-Opener-Policy-Report-Only', 'same-origin-allow-popups');
   // CORP header: Allow cross-origin requests to this resource
   res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
   next();
