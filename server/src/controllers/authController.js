@@ -5,6 +5,13 @@ import { FirestoreUserStore } from '../utils/firestoreStore.js';
 const googleClientId = process.env.GOOGLE_CLIENT_ID || '';
 const oauthClient = googleClientId ? new OAuth2Client(googleClientId) : null;
 
+// Log OAuth initialization status
+if (googleClientId) {
+  console.log('✅ Google OAuth Client initialized with CLIENT_ID:', googleClientId.substring(0, 20) + '...');
+} else {
+  console.error('❌ GOOGLE_CLIENT_ID environment variable not set - Google login will fail');
+}
+
 function makeUsernameFromEmail(email, fallback = 'googleuser') {
   const base = (email || '').split('@')[0]?.toLowerCase().replace(/[^a-z0-9]/g, '') || fallback;
   return base || fallback;
