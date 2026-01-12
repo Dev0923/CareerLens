@@ -13,11 +13,15 @@ if (process.env.FIREBASE_SERVICE_ACCOUNT) {
   try {
     serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
     console.log('✅ Firebase credentials loaded from environment variable');
+    console.log('   Project ID:', serviceAccount.project_id);
+    console.log('   Client Email:', serviceAccount.client_email);
   } catch (error) {
     console.error('❌ Failed to parse FIREBASE_SERVICE_ACCOUNT:', error.message);
+    console.error('   Raw value length:', process.env.FIREBASE_SERVICE_ACCOUNT?.length);
     throw new Error('Invalid FIREBASE_SERVICE_ACCOUNT environment variable');
   }
 } else {
+  console.log('⚠️  FIREBASE_SERVICE_ACCOUNT not set, using local file');
   // Local development: read from file
   const serviceAccountPath = path.resolve(__dirname, '../../firebase-service-account.json');
   if (!fs.existsSync(serviceAccountPath)) {
