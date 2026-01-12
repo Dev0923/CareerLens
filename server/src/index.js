@@ -20,6 +20,13 @@ if (!process.env.GOOGLE_API_KEY && fs.existsSync(rootEnv)) {
   dotenv.config({ path: rootEnv });
 }
 
+// Log environment variable status
+console.log('=== Environment Variables Check ===');
+console.log('GOOGLE_API_KEY:', process.env.GOOGLE_API_KEY ? '✓ SET' : '✗ MISSING');
+console.log('GOOGLE_CLIENT_ID:', process.env.GOOGLE_CLIENT_ID ? '✓ SET' : '✗ MISSING');
+console.log('NODE_ENV:', process.env.NODE_ENV || 'development');
+console.log('===================================');
+
 const app = express();
 const PORT = process.env.PORT || 4000;
 
