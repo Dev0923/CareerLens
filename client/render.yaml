@@ -1,0 +1,9 @@
+# Force Render to rebuild without cache
+services:
+  - type: static_site
+    name: careerlens-frontend
+    buildCommand: npm run build
+    staticPublicPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: "18"
