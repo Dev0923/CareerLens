@@ -34,7 +34,9 @@ const PORT = process.env.PORT || 4000;
 const isProd = process.env.NODE_ENV === 'production';
 const allowedOrigins = isProd 
   ? [
-      process.env.FRONTEND_URL || 'https://careerlens-frontend.onrender.com',
+      process.env.FRONTEND_URL || 'https://careerlens-v4m1.onrender.com',
+      'https://careerlens-frontend.onrender.com',
+      'https://careerlens-v4m1.onrender.com',
       'http://localhost:5173',
       'http://localhost:5174'
     ]
