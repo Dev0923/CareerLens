@@ -645,7 +645,7 @@ export default function CareerRoadmapGenerator({ onBack }) {
                     <p style={{ 
                       margin: '0 0 8px 0', 
                       fontSize: '12px', 
-                      color: '#888', 
+                      color: '#555', 
                       textTransform: 'uppercase', 
                       fontWeight: '700',
                       letterSpacing: '1px'
@@ -668,13 +668,13 @@ export default function CareerRoadmapGenerator({ onBack }) {
                   marginBottom: '12px',
                   alignItems: 'center'
                 }}>
-                  <strong style={{ fontSize: '15px', color: '#1a1a2e' }}>
+                  <strong style={{ fontSize: '15px', color: '#1a1a1a' }}>
                     Overall Progress
                   </strong>
                   <span style={{ 
                     fontSize: '14px', 
                     fontWeight: '700', 
-                    color: '#667eea' 
+                    color: '#00B4A8' 
                   }}>
                     {completedPhases.length} / {roadmap.phases.length} Phases
                   </span>
@@ -856,7 +856,7 @@ export default function CareerRoadmapGenerator({ onBack }) {
                               <span style={{ fontSize: '24px' }}>📚</span>
                               <strong style={{ 
                                 fontSize: '16px', 
-                                color: '#1a1a2e',
+                                color: '#1a1a1a',
                                 fontWeight: '800'
                               }}>Skills to Master</strong>
                             </div>
@@ -868,12 +868,12 @@ export default function CareerRoadmapGenerator({ onBack }) {
                               {phase.skillsToLearn.map((skill, i) => (
                                 <div key={i} className="skill-item" style={{ 
                                   padding: '10px 18px',
-                                  background: 'linear-gradient(135deg, #00B4A815 0%, #1DB58415 100%)',
+                                  background: 'linear-gradient(135deg, #e0f9f7 0%, #e8f7f4 100%)',
                                   borderRadius: '20px',
                                   fontSize: '14px',
                                   fontWeight: '600',
-                                  color: '#00B4A8',
-                                  border: '2px solid #00B4A830',
+                                  color: '#008A7C',
+                                  border: '2px solid #00B4A850',
                                   animationDelay: `${i * 0.05}s`,
                                   transition: 'all 0.3s ease'
                                 }}
@@ -883,8 +883,8 @@ export default function CareerRoadmapGenerator({ onBack }) {
                                   e.currentTarget.style.transform = 'scale(1.05)';
                                 }}
                                 onMouseLeave={e => {
-                                  e.currentTarget.style.background = 'linear-gradient(135deg, #00B4A815 0%, #1DB58415 100%)';
-                                  e.currentTarget.style.color = '#00B4A8';
+                                  e.currentTarget.style.background = 'linear-gradient(135deg, #e0f9f7 0%, #e8f7f4 100%)';
+                                  e.currentTarget.style.color = '#008A7C';
                                   e.currentTarget.style.transform = 'scale(1)';
                                 }}>
                                   ✓ {skill}
@@ -904,7 +904,7 @@ export default function CareerRoadmapGenerator({ onBack }) {
                               <span style={{ fontSize: '24px' }}>🛠️</span>
                               <strong style={{ 
                                 fontSize: '16px', 
-                                color: '#1a1a2e',
+                                color: '#1a1a1a',
                                 fontWeight: '800'
                               }}>Build These Projects</strong>
                             </div>
@@ -913,10 +913,10 @@ export default function CareerRoadmapGenerator({ onBack }) {
                                 <div key={i} style={{ 
                                   marginBottom: 12,
                                   padding: '14px 18px',
-                                  background: 'linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%)',
+                                  background: 'linear-gradient(135deg, #f0fdf9 0%, #e6f7f3 100%)',
                                   borderRadius: '12px',
                                   fontSize: '14px',
-                                  color: '#333',
+                                  color: '#1a1a1a',
                                   borderLeft: '4px solid #1DB584',
                                   transition: 'all 0.3s ease',
                                   fontWeight: '600'
@@ -956,7 +956,7 @@ export default function CareerRoadmapGenerator({ onBack }) {
                             </strong>
                             <p style={{ 
                               margin: 0, 
-                              color: '#666', 
+                              color: '#555', 
                               fontSize: '14px', 
                               lineHeight: 1.8,
                               fontWeight: '500'
