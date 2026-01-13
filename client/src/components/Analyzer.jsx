@@ -1165,20 +1165,29 @@ export default function Analyzer({ user, onLogout, showSkillGapOnly = false, sho
         }
 
         /* Google Design Mode Overrides */
-        :global(.google-mode) .job-textarea {
+        html.google-mode .job-textarea {
           background: #fef7ff;
           color: #1d192b;
           border-color: #d0bcff;
         }
 
-        :global(.google-mode) .job-textarea::placeholder {
+        html.google-mode .job-textarea::placeholder {
           color: #79747e;
         }
 
-        :global(.google-mode) .job-textarea:focus {
+        html.google-mode .job-textarea:focus {
           border-color: #6750a4;
           box-shadow: 0 0 20px rgba(103, 80, 164, 0.2);
           background: #ffffff;
+        }
+
+        /* Ensure steps text is readable in Google mode */
+        html.google-mode .steps-section .step-content h3 {
+          color: #1d192b;
+        }
+
+        html.google-mode .steps-section .step-content p {
+          color: #49454f;
         }
 
         @media (max-width: 1024px) {

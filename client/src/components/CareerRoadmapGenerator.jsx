@@ -708,12 +708,13 @@ export default function CareerRoadmapGenerator({ onBack }) {
           }}>
             <h2 style={{ 
               fontSize: '32px', 
-              color: 'white', 
+              background: 'linear-gradient(135deg, #00B4A8 0%, #1DB584 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
               marginTop: 0, 
               marginBottom: 32,
               textAlign: 'center',
-              fontWeight: '900',
-              textShadow: '0 4px 12px rgba(0,0,0,0.3)'
+              fontWeight: '900'
             }}>
               📈 Your Career Journey
             </h2>
