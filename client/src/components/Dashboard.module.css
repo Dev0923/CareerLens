@@ -1086,6 +1086,49 @@
   font-weight: 600;
 }
 
+/* Google Mode Overrides for Steps & Stats */
+:global(.google-mode) .quickStartSection {
+  background: linear-gradient(135deg, #fef7ff 0%, #f7f2ff 100%);
+  border-color: #e8def8;
+  box-shadow: 0 4px 20px rgba(103, 80, 164, 0.08);
+}
+
+:global(.google-mode) .quickStartTitle {
+  color: #1d192b;
+}
+
+:global(.google-mode) .stepContent h4 {
+  color: #1d192b;
+}
+
+:global(.google-mode) .stepContent p {
+  color: #49454f;
+}
+
+:global(.google-mode) .statsSection {
+  background: linear-gradient(135deg, #fef7ff 0%, #f7f2ff 100%);
+  border-color: #e8def8;
+  box-shadow: 0 4px 20px rgba(103, 80, 164, 0.08);
+}
+
+:global(.google-mode) .statsTitle {
+  color: #1d192b;
+}
+
+:global(.google-mode) .statCard {
+  background: #ffffff;
+  border-color: #e8def8;
+}
+
+:global(.google-mode) .statCard:hover {
+  border-color: #d0bcff;
+  box-shadow: 0 8px 20px rgba(103, 80, 164, 0.15);
+}
+
+:global(.google-mode) .statName {
+  color: #49454f;
+}
+
 @media (max-width: 768px) {
   .dashboard {
     padding: 24px 16px;
